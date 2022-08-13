@@ -1,4 +1,4 @@
-package generator
+package main
 
 import (
     "fmt"
@@ -6,6 +6,7 @@ import (
     "os"
     "math/rand"
     "strings"
+    "path/filepath"
 )
 
 var sizeFlag, numCitiesFlag int
@@ -21,7 +22,13 @@ func main() {
     fmt.Println("n ",sizeFlag)
     fmt.Println("m ",numCitiesFlag)
 
-    file,err := os.Create(filenameFlag) 
+    path, err := filepath.Abs("../../MisInstancias/"+filenameFlag)
+    if err != nil {
+	fmt.Println("Error", err.Error())
+	os.Exit(1)
+    }
+
+    file,err := os.Create(path) 
     if err != nil {
 	fmt.Println(err.Error())
 	os.Exit(1)
