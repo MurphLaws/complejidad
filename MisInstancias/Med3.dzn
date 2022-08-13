@@ -1,3 +1,8 @@
+%Ubicación de la universidad (E;N): 964.0; 957.0
+%Distancia más larga: 1844.0
+%----------
+%==========
+%Finished in 8m 50s.
 n=1900;
 m=2000;
 ciudades=[|81,1287
