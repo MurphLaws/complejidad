@@ -9,12 +9,14 @@ def enviar_datos():
     respuestas = apply_model(texto_n,texto_m,texto_coordenadas)
     respuesta_ubicacion["text"]= respuestas[0]
     respuesta_distancia["text"]= respuestas[1]
+    respuesta_tiempo["text"]= respuestas[2]
 
 def abrir_archivo():
     archivo =filedialog.askopenfilename(title="Abrir")
     respuestas_2 = apply_model_from_data(archivo)
     respuesta_ubicacion["text"]= respuestas_2[0]
     respuesta_distancia["text"]= respuestas_2[1]
+    respuesta_tiempo["text"]= respuestas_2[2]
 
 ventana = tkinter.Tk()
 ventana.geometry("400x300")
@@ -28,6 +30,7 @@ caja_texto_coordenadas = tkinter.Entry(ventana)
 boton_enviar =tkinter.Button(ventana,text="Click", command=enviar_datos)
 respuesta_ubicacion =tkinter.Label(ventana)
 respuesta_distancia =tkinter.Label(ventana)
+respuesta_tiempo =tkinter.Label(ventana)
 boton_abrir =tkinter.Button(ventana,text="Abrir", command=abrir_archivo)
 
 etiqueta_n.pack()
@@ -40,6 +43,7 @@ boton_enviar.pack()
 boton_abrir.pack()
 respuesta_ubicacion.pack()
 respuesta_distancia.pack()
+respuesta_tiempo.pack()
 
 
 ventana.mainloop()
