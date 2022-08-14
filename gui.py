@@ -1,11 +1,13 @@
 import tkinter
-from test import funcion_ejemplo
+from test import apply_model
 
 def enviar_datos():
     texto_n = caja_texto_n.get()
     texto_m = caja_texto_m.get()
     texto_coordenadas = caja_texto_coordenadas.get()
-    funcion_ejemplo(texto_n,texto_m,texto_coordenadas)
+    respuestas = apply_model(texto_n,texto_m,texto_coordenadas)
+    respuesta_ubicacion["text"]= respuestas[0]
+    respuesta_distancia["text"]= respuestas[1]
 
 ventana = tkinter.Tk()
 ventana.geometry("400x300")
@@ -16,6 +18,8 @@ caja_texto_m = tkinter.Entry(ventana)
 etiqueta_coordenadas = tkinter.Label(ventana, text = "Coordenadas")
 caja_texto_coordenadas = tkinter.Entry(ventana)
 boton_enviar =tkinter.Button(ventana,text="Click", command=enviar_datos)
+respuesta_ubicacion =tkinter.Label(ventana)
+respuesta_distancia =tkinter.Label(ventana)
 etiqueta_n.pack()
 caja_texto_n.pack()
 etiqueta_m.pack()
@@ -23,6 +27,8 @@ caja_texto_m.pack()
 etiqueta_coordenadas.pack()
 caja_texto_coordenadas.pack()
 boton_enviar.pack()
+respuesta_ubicacion.pack()
+respuesta_distancia.pack()
 
 ventana.mainloop()
 
