@@ -16,5 +16,7 @@ constraint forall(i in rangoCiudades) (
 % Función objetivo
 solve minimize max(distancias);
 
+
 output["Ubicación de la universidad (E;N): \(ubicacion[1]/100); "] ++ ["\(ubicacion[2]/100)\n"]++
 ["Distancia más larga: \(max(distancias)/100)"];
+
