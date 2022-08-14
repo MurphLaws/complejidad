@@ -1,5 +1,5 @@
 import tkinter
-from test import apply_model
+from test import apply_model, apply_model_from_data
 from tkinter import filedialog
 
 def enviar_datos():
@@ -12,8 +12,7 @@ def enviar_datos():
 
 def abrir_archivo():
     archivo =filedialog.askopenfilename(title="Abrir")
-    print(archivo)
-    return archivo
+    apply_model_from_data(archivo)
 
 ventana = tkinter.Tk()
 ventana.geometry("400x300")
