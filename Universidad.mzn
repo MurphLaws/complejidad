@@ -20,5 +20,5 @@ constraint forall(i in rangoCiudades) (
 % Función objetivo
 solve minimize max(distancias);
 
-output["Ubicación de la universidad (E,N): \(ubicacion)\n"]++
-["Distancia más larga: \(max(distancias))"];
+%output["Ubicación de la universidad (E,N): \(ubicacion)\n"]++
+%["Distancia más larga: \(max(distancias))"];
