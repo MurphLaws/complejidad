@@ -1,5 +1,5 @@
 import tkinter
-from test import apply_model, apply_model_from_data
+from utils import apply_model, apply_model_from_data
 from tkinter import filedialog
 
 def enviar_datos():
