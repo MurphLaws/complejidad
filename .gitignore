@@ -129,3 +129,21 @@ dmypy.json
 .pyre/
 
 tags
+1745133-1744883-1740395-1744338-EntregaCyOpt2022-1.zip
+*.pdf
+Entrega/MisInstancias/Instancia.dzn
+Entrega/MisInstancias/Instancia2.dzn
+Entrega/MisInstancias/Instancia4.dzn
+Entrega/UniversidadInterfazFuentes/utils.py
+Entrega/UniversidadInterfazFuentes/requirements.txt
+Entrega/UniversidadInterfazFuentes/README
+Entrega/UniversidadInterfazFuentes/gui.py
+Entrega/UniversidadInterfazFuentes/generator/Universidad.mzn
+Entrega/UniversidadInterfazFuentes/generator/go.mod
+Entrega/UniversidadInterfazFuentes/generator/generator.go
+Entrega/UniversidadInterfazFuentes/generator/generator
+Entrega/UniversidadInterfazFuentes/Datos.dzn
+Entrega/Universidad.mzn
+Entrega/MisInstancias/README
+Entrega/MisInstancias/Instancia5.dzn
+Entrega/MisInstancias/Instancia3.dzn

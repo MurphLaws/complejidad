@@ -2,6 +2,10 @@
 from minizinc import Instance, Model, Solver
 import time
 
+def write_file(n,m,ciudades):
+    file = open("Datos.dzn", "w")
+    L = ["n=" + n +";\n","m="+ m + ";\n","ciudades=[|"+ciudades+ "|];"]
+    file.writelines(L)
 
 
 def apply_model(n,m,ciudades):
@@ -15,6 +19,7 @@ def apply_model(n,m,ciudades):
     matrix = [list(map(int, t.split(","))) for t in parejas]
     instance["ciudades"] = matrix
     result = instance.solve()
+    write_file(n,m,ciudades)
     ubicacion_respuesta = [x / 100 for x in result.solution.ubicacion]
     return("Ubicación de la universidad (E,N): "+ str(ubicacion_respuesta), "Distancia más larga: "+ str(result.solution.objective/100), str(round(time.time() - start_time, 2)) + " Segundos")
 
