@@ -14,7 +14,9 @@ constraint forall(i in rangoCiudades) (
 	distancias[i] = abs(100*ciudades[i,1] - ubicacion[1]) + abs(100*ciudades[i,2] - ubicacion[2]));
 
 % Función objetivo
-solve minimize max(distancias);
+%solve minimize max(distancias);
+solve ::int_search(ubicacion, occurrence, indomain_median) minimize max(distancias);
+%solve ::int_search(ubicacion, smallest , indomain_min) minimize max(distancias);
 
 output["Ubicación de la universidad (E;N): \(ubicacion[1]/100); "] ++ ["\(ubicacion[2]/100)\n"]++
 ["Distancia más larga: \(max(distancias)/100)"];
